@@ -1,0 +1,12 @@
+name: Demo
+title: Demo
+username:
+account: ericskuse
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2530182
+bundleId: 3344797
+url: https://ericskuse.shinyapps.io/Demo/
+when: 1593713558.86683
+asMultiple: FALSE
+asStatic: FALSE

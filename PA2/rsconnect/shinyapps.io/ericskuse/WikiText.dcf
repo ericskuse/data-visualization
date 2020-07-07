@@ -1,0 +1,13 @@
+name: WikiText
+title: WikiText
+username:
+account: ericskuse
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2530994
+bundleId: 3348590
+url: https://ericskuse.shinyapps.io/WikiText/
+when: 1593791658.84448
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|app copy.R|DemoApp.R|Untitled.R
