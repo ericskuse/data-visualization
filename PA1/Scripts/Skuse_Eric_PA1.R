@@ -18,7 +18,7 @@ names(GDPperCapita) <- c("country","year","GDPperCapita","population")
 data <- education%>%
   merge(avgYearEdu, by=c("country","year"))%>%
   merge(GDPperCapita, by=c("country","year"))
-na.omit(data)
+data <- na.omit(data)
 
 ourPlotMaker <- function(thisYear, cnum, textStatus){
   
@@ -34,10 +34,11 @@ ourPlotMaker <- function(thisYear, cnum, textStatus){
   theme_set(theme_wsj())
   
   p <- filteredData%>%
-    ggplot(aes(x=avgYearEdu,y=GDPperCapita,color=ifelse(male>=female,'Male','Female'), size=population))+
-    geom_point()+
+    ggplot(aes(x=avgYearEdu,y=GDPperCapita,color=ifelse(male>=female,'Male','Female')))+
+    geom_point(aes(size=population))+
     annotate("text",label=thisYear,color='grey80',size=20,x=7.5,y=35000)+
     scale_y_continuous(labels = dollar)+
+    labs(x = "Average number of years of education", y = "GDP per capita")+
     theme(plot.title = element_text(size = rel(0.6)),
           legend.title = element_text(size = rel(0.5)),
           axis.title=element_text(face = "bold", size = rel(0.6)))
@@ -46,8 +47,10 @@ ourPlotMaker <- function(thisYear, cnum, textStatus){
     
     # cut the geom_text line and paste it below
     p <- p + geom_text(data= filteredData %>% 
-                         filter(country %in% countriesToShow),
-                       mapping = aes(label = country))
+                        filter(country %in% countriesToShow),
+                        mapping = aes(label = country),
+                        nudge_y = 1000)
   }
   return(p)
 }
+
