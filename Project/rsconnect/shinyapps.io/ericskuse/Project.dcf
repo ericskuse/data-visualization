@@ -1,0 +1,13 @@
+name: Project
+title: Project
+username:
+account: ericskuse
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2601970
+bundleId: 3622487
+url: https://ericskuse.shinyapps.io/Project/
+when: 1599932584.29713
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|Old
