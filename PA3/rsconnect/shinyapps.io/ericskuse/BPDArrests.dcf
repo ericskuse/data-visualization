@@ -1,0 +1,13 @@
+name: BPDArrests
+title: BPDArrests
+username:
+account: ericskuse
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2553939
+bundleId: 3622389
+url: https://ericskuse.shinyapps.io/BPDArrests/
+when: 1599929953.11129
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: BPD.R|PA3.pdf|Data/data.csv|Data/usholidays.csv
